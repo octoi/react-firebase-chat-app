@@ -7,13 +7,20 @@ import Chat from './components/Chat';
 import './App.css'
 
 function App() {
-    const [user] = useAuthState(auth);
+    const [user, loading, error] = useAuthState(auth);
+
+    if (error) {
+        console.log(error);
+        alert("Oops something went wrong !");
+    }
 
     return (
-        <ChakraWrap>
-            <Header user={user} />
-            {user ? <Chat /> : <Login />}
-        </ChakraWrap>
+        <section>
+            <ChakraWrap>
+                <Header user={user} />
+                {user ? <Chat /> : <Login loading={loading} />}
+            </ChakraWrap>
+        </section>
     );
 }
 
