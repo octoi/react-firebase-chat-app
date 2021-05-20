@@ -19,20 +19,6 @@ export default function Chat() {
     return (
         <Flex direction="column" justifyContent="space-between" marginTop="20px">
             <div style={{ height: "75vh", overflowX: "hidden", margin: "20px 0px" }}>
-
-                <ChatMessage chat={{ message: "Hello World, this is awesome", sender: { ...user, email: "test@test.com" } }} user={user} />
-                <ChatMessage chat={{ message: "Hello World, this is awesome", sender: user }} user={user} />
-                <ChatMessage chat={{ message: "Hello World, this is awesome", sender: { ...user, email: "test@test.com" } }} user={user} />
-                <ChatMessage chat={{ message: "Hello World, this is awesome", sender: user }} user={user} />
-                <ChatMessage chat={{ message: "Hello World, this is awesome", sender: { ...user, email: "test@test.com" } }} user={user} />
-                <ChatMessage chat={{ message: "Hello World, this is awesome", sender: user }} user={user} />
-                <ChatMessage chat={{ message: "Hello World, this is awesome", sender: { ...user, email: "test@test.com" } }} user={user} />
-                <ChatMessage chat={{ message: "Hello World, this is awesome", sender: user }} user={user} />
-                <ChatMessage chat={{ message: "Hello World, this is awesome", sender: { ...user, email: "test@test.com" } }} user={user} />
-                <ChatMessage chat={{ message: "Hello World, this is awesome", sender: user }} user={user} />
-                <ChatMessage chat={{ message: "Hello World, this is awesome", sender: { ...user, email: "test@test.com" } }} user={user} />
-                <ChatMessage chat={{ message: "Hello World, this is awesome", sender: user }} user={user} />
-
             </div>
             <form onSubmit={sendMessage} style={{ display: "flex" }}>
                 <Input

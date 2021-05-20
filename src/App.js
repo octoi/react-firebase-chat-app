@@ -11,6 +11,7 @@ function App() {
 
     if (error) {
         console.log(error);
+        console.log(loading);
         alert("Oops something went wrong !");
     }
 
@@ -18,7 +19,7 @@ function App() {
         <section>
             <ChakraWrap>
                 <Header user={user} />
-                {user ? <Chat /> : <Login loading={loading} />}
+                {user ? <Chat /> : <Login />}
             </ChakraWrap>
         </section>
     );
